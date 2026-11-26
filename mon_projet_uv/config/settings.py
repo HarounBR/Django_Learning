@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'myfirstapp',
     'django.contrib.staticfiles',
+    'AccountApp',
+    'AppointmentApp',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +78,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db_tp_v2.sqlite3',
     }
 }
 
@@ -98,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+AUTH_USER_MODEL = "AccountApp.user"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
